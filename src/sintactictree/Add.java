@@ -1,6 +1,4 @@
-
 package sintactictree;
-
-public class Add {
+public class Add extends BinaryOperationNode{  
     
 }
