@@ -6,7 +6,7 @@ public class SintacticTree {
        //out.println("hola");
         ConstantNode cnode = new ConstantNode("9");
         BinaryOperationNode bnode = new BinaryOperationNode("+");
-        out.println(cnode.getInfo());
+      
         if(cnode.Evaluate()){
             out.println("es constante");
         }

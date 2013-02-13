@@ -1,28 +1,20 @@
 package sintactictree;
 public class BinaryOperationNode extends Node{
-    private Node node = new Node() {
-            @Override
-            public boolean Evaluate() {
-                return true;
-            }
-        };
-    
     public BinaryOperationNode(){
         
     }
         
     public BinaryOperationNode(Object info){
-        node.setInfo(info);
+        this.info = info;
+        this.left = null;
+        this.right = null;
     }
 
-    public Object getInfo(){
-        return node.getInfo();
-    }
-    
     
     @Override
     public boolean Evaluate() {      
-        return false;
+        return ((info.toString().matches("[+]")) || info.toString().matches("[-]")||
+                (info.toString().matches("[*]")) || info.toString().matches("[/]"))?true:false;
     }
     
 }
