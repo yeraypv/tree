@@ -1,7 +1,7 @@
 package sintactictree;
 
 public abstract class Node {
-    protected Object info;
+    protected double info;
     protected Node right, left;
-    abstract boolean Evaluate();
+    abstract double Evaluate();
 }
