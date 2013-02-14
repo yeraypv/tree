@@ -12,6 +12,6 @@ public class div extends BinaryOperationNode{
         
     public double div(Node node){
         //TODO: Exception divide by zero.
-        return (node.left.Evaluate() / node.right.Evaluate());
+        return Double.parseDouble(node.left.Evaluate().toString()) * Double.parseDouble(node.right.Evaluate().toString());
     }
 }

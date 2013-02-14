@@ -3,15 +3,14 @@ public class BinaryOperationNode extends Node{
     public BinaryOperationNode(){   
     }
         
-    public BinaryOperationNode(double info){
+    public BinaryOperationNode(String info){
         this.info = info;
         this.left = null;
         this.right = null;
     }
-
-    @Override
-    public double Evaluate() { 
-        return this.info;
-    }
     
+    @Override
+    public Object Evaluate() { 
+        return info;
+    }
 }

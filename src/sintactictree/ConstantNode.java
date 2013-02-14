@@ -8,7 +8,7 @@ public class ConstantNode extends Node{
     }
 
     @Override
-    public double Evaluate() {
+    public Object Evaluate() {
         return info;
     }
 }
