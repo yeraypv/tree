@@ -1,17 +1,20 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
 package sintactictree;
 
-/**
- *
- * @author yeray
- */
 public class div extends BinaryOperationNode{
         
     public double div(Node node){
         //TODO: Exception divide by zero.
-        return Double.parseDouble(node.left.Evaluate().toString()) * Double.parseDouble(node.right.Evaluate().toString());
+        if(node.right.Evaluate() == 0){
+            //TODO: Exception.
+        }
+        return convertDoubleNode(node.left) * convertDoubleNode(node.right);
+    }
+    
+    public double convertDoubleNode(Node node){
+        return Double.parseDouble(convertToString(node));
+    }
+    
+    public String convertToString(Node node){
+        return node.Evaluate().toString();
     }
 }
