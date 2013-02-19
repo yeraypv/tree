@@ -2,7 +2,8 @@ package sintactictree;
 
 public abstract class Node {
     private Object info;
-    private Node right, left;
+    private Node right, getNodeLeft;
+    
     public Object getNodeInfo(){
         return info;
     }
@@ -12,7 +13,7 @@ public abstract class Node {
     }
     
     public Node getNodeLeft(){
-        return left;
+        return getNodeLeft;
     }
     
     public void setNodeRight(Node node){
@@ -20,7 +21,11 @@ public abstract class Node {
     }
     
     public void setNodeLeft(Node node){
-        left = node;
+        getNodeLeft = node;
+    }
+    
+    public void setNodeInfo(Object info){
+        this.info = info;
     }
     abstract Object Evaluate();
 }

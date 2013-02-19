@@ -4,13 +4,13 @@ public class BinaryOperationNode extends Node{
     }
         
     public BinaryOperationNode(String info){
-        this.info = info;
-        this.left = null;
-        this.right = null;
+        this.setNodeInfo(info);
+        this.setNodeLeft(null);
+        this.setNodeRight(null);
     }
     
     @Override
     public Object Evaluate() { 
-        return info;
+        return this.getNodeInfo();
     }
 }

@@ -13,9 +13,9 @@ public class showTreeTest {
 
     public void show(Node node){
         if (node != null){
-            show(node.left);
-            System.out.print(node.info + " ");
-            show(node.right);
+            show(node.getNodeLeft());
+            System.out.print(node.getNodeInfo() + " ");
+            show(node.getNodeRight());
         }
     }
     @Test
@@ -25,10 +25,10 @@ public class showTreeTest {
         BinaryOperationNode op1 = new BinaryOperationNode("+");
         ConstantNode constant3 = new ConstantNode(4.5);      
         BinaryOperationNode op2 = new BinaryOperationNode("*");
-        op1.left = constant1;
-        op1.right = op2;
-        op2.left = constant2;
-        op2.right = constant3;
+        op1.setNodeLeft(constant1);
+        op1.setNodeRight(op2);
+        op2.setNodeLeft(constant2);
+        op2.setNodeRight(constant3);    
         show(op1);
     }
 }

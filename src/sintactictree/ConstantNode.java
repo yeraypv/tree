@@ -2,13 +2,13 @@ package sintactictree;
 public class ConstantNode extends Node{
 
     public ConstantNode(double info){
-        this.info = info;
-        this.left = null;
-        this.right = null;
+        this.setNodeInfo(info);
+        this.setNodeLeft(null);
+        this.setNodeRight(null);
     }
 
     @Override
     public Object Evaluate() {
-        return info;
+        return this.getNodeInfo();
     }
 }
