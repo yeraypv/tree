@@ -1,6 +1,6 @@
 package sintactictree;
 
-public class div extends BinaryOperationNode{
+public class Divide extends BinaryOperationNode{
         
     public double div(Node node){
         //TODO: Exception divide by zero.
