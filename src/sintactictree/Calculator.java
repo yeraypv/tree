@@ -21,11 +21,11 @@ abstract class Calculator {
     abstract Integer mult(Integer p0, Integer p1);
     
     
-    abstract Double divide(Double p0, Double p1) throws ExceptionDivideByZero;
-    abstract Double divide(Integer p0, Double p1) throws ExceptionDivideByZero;
-    abstract Double divide(Double p0, Integer p1) throws ExceptionDivideByZero;
-    abstract Integer divide(Integer p0, Integer p1) throws ExceptionDivideByZero;
+    abstract Double divide(Double p0, Double p1);
+    abstract Double divide(Integer p0, Double p1);
+    abstract Double divide(Double p0, Integer p1);
+    abstract Integer divide(Integer p0, Integer p1);
     
-    abstract Type calculate(Operator operator, Type arg1, Type arg2);
+    abstract Type calculate(BinaryOperationNode operator, Type arg1, Type arg2);
     
 }

@@ -1,9 +1,9 @@
 package sintactictree;
-public class Operator extends Node{
-    public Operator(){   
+public class BinaryOperationNode extends Node{
+    public BinaryOperationNode(){   
     }
         
-    public Operator(String info){
+    public BinaryOperationNode(String info){
         this.setNodeInfo(info);
         this.setNodeLeft(null);
         this.setNodeRight(null);

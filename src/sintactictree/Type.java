@@ -1,5 +1,4 @@
 package sintactictree;
 
-public class Type {
-    
+public class Type{
 }
