@@ -10,7 +10,7 @@ import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 import static org.junit.Assert.*;
-import sintactictree.BinaryOperationNode;
+import sintactictree.Operator;
 
 /**
  *
@@ -19,7 +19,7 @@ import sintactictree.BinaryOperationNode;
 public class BinaryOperationNodeTest {
     @Test
     public void CreateBinaryOperationNode(){
-        BinaryOperationNode binoperator = new BinaryOperationNode();
+        Operator binoperator = new Operator();
      
     }
     
