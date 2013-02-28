@@ -1,10 +1,10 @@
 package sintactictree;
 
-public abstract class Node {
-    private Object info;
-    private Node right, getNodeLeft;
+public abstract class Node<TypeGeneric> {
+    private TypeGeneric info;
+    private Node right, Left;
     
-    public Object getNodeInfo(){
+    public TypeGeneric getNodeInfo(){
         return info;
     }
     
@@ -13,7 +13,7 @@ public abstract class Node {
     }
     
     public Node getNodeLeft(){
-        return getNodeLeft;
+        return Left;
     }
     
     public void setNodeRight(Node node){
@@ -21,11 +21,11 @@ public abstract class Node {
     }
     
     public void setNodeLeft(Node node){
-        getNodeLeft = node;
+        Left = node;
     }
     
-    public void setNodeInfo(Object info){
+    public void setNodeInfo(TypeGeneric info){
         this.info = info;
     }
-    abstract Object Evaluate();
+    abstract TypeGeneric Evaluate();
 }

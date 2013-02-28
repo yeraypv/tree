@@ -30,4 +30,5 @@ public class NumberCalculatorTest {
         Assert.assertEquals(Double.NEGATIVE_INFINITY, result2);
         
     }
+    
 }

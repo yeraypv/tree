@@ -14,6 +14,5 @@ public class BinaryOperationNodeTest {
         BinaryOperationNode binoperator4 = new BinaryOperationNode("/");
         Assert.assertEquals("/",binoperator4.Evaluate());
     }
-    @Test
     
 }

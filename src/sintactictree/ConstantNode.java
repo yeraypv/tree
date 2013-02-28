@@ -1,14 +1,14 @@
 package sintactictree;
-public class ConstantNode extends Node{
+public class ConstantNode<TypeGeneric> extends Node{
 
-    public ConstantNode(double info){
+    public ConstantNode(TypeGeneric info){
         this.setNodeInfo(info);
         this.setNodeLeft(null);
         this.setNodeRight(null);
     }
 
     @Override
-    public Object Evaluate() {
-        return this.getNodeInfo();
+    public TypeGeneric Evaluate() {
+        return (TypeGeneric) this.getNodeInfo();
     }
 }

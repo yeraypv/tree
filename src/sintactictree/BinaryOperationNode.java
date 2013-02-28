@@ -1,16 +1,18 @@
 package sintactictree;
-public class BinaryOperationNode extends Node{
+
+public class BinaryOperationNode<TypeGeneric> extends Node{
+    private TypeGeneric info;
     public BinaryOperationNode(){   
     }
         
-    public BinaryOperationNode(String info){
-        this.setNodeInfo(info);
+    public BinaryOperationNode(TypeGeneric info){
+        this.info = info;
         this.setNodeLeft(null);
         this.setNodeRight(null);
     }
     
     @Override
-    public Object Evaluate() { 
-        return this.getNodeInfo();
+    public TypeGeneric Evaluate() { 
+        return info;
     }
 }
