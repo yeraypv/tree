@@ -90,18 +90,7 @@ public class NumberCalculator extends Calculator{
 
     @Override
     public Type calculate(BinaryOperationNode operator, Type arg1, Type arg2) {
-        Type p = new Type();
-        for(Method method : NumberCalculator.class.getDeclaredMethods()){
-         
-            if(getMethodSignature(method).equals(getSignature(operator,arg1,arg2))){  
-                try {
-                    p.setInfo(method.invoke(operator.Evaluate().toString(), arg1.getInfo().toString(), arg2.getInfo().toString()));
-                } catch (IllegalAccessException | IllegalArgumentException | InvocationTargetException ex) {
-                    Logger.getLogger(NumberCalculator.class.getName()).log(Level.SEVERE, null, ex);
-                }
-            }
-        }
-        return p;
+        return null; //TODO: crear calculate
     }
     
     private static String getMethodSignature(Method method){
@@ -109,12 +98,14 @@ public class NumberCalculator extends Calculator{
         for(Class<?> parameter : method.getParameterTypes()){
             result += parameter.getSimpleName();
         }
+      
         return result;
         
     }
 
     private static String getSignature(BinaryOperationNode operator, Type arg1, Type arg2) {
-        return (operator.Evaluate().toString() + arg1.getType()+ arg2.getType());
+       return (operator.Evaluate().toString() + arg1.getType()+ arg2.getType());
+        
     }
     
 }

@@ -1,27 +1,31 @@
 package sintactictree;
 
-public class Type<TypeGeneric>{
-    private String type;
-    private TypeGeneric info;
+public class Type<Object>{
+    private Object type, info;
     
-    public Type(String type, TypeGeneric info){
+    public Type(Object type, Object info){
         this.type = type;
         this.info = info;
     }
 
     Type() {
-     
+        this.type = null;
+        this.info = null;
     }
     
-    public String getType(){
+    public Object getType(){
         return type;
     }
     
-    public TypeGeneric getInfo(){
+    public Object getInfo(){
         return info;
     }
     
-    public void setInfo(TypeGeneric info){
+    public void setType(Object type){
+        this.type = type;
+    }
+    
+    public void setInfo(Object info){
         this.info = info; 
     }
 }
