@@ -25,4 +25,5 @@ public class ConstantTest {
         assertEquals(java.lang.Double.class, constant.evaluate().getValue().getClass());
         assertEquals(0.0, (double) constant.evaluate().getValue(), 0.0);
     }
+    
 }

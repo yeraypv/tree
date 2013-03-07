@@ -1,5 +1,6 @@
 package evaluator.calculator.number;
 import evaluator.calculators.Calculator;
+import evaluator.calculators.annotations.Function;
 import evaluator.calculators.annotations.Operators;
 
 public class CoreNumberCalculator extends Calculator implements NumberCalculator {
@@ -99,5 +100,18 @@ public class CoreNumberCalculator extends Calculator implements NumberCalculator
     public Integer div(Integer arg0, Integer arg1) {
         return arg0 / arg1;
     }
+
+    @Override
+    @Function
+    public Double abs(Double x) {
+        return Math.abs(x);
+    }
+
+    @Function("sqrt")
+    @Override
+    public Double sqrt(Double x) {
+        return Math.sqrt(x);
+    }
+    
 
 }

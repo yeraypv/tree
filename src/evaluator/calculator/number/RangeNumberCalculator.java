@@ -113,4 +113,14 @@ public class RangeNumberCalculator implements NumberCalculator {
         return calculator.div(arg0, arg1);
     }
 
+    @Override
+    public Double abs(Double x) {
+        return calculator.abs(x);
+    }
+
+    @Override
+    public Double sqrt(Double x) {
+        return calculator.abs(x);
+    }
+
 }

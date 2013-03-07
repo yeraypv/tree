@@ -33,5 +33,9 @@ public interface NumberCalculator {
     public Double div(Integer arg0, Double arg1);
 
     public Integer div(Integer arg0, Integer arg1);
+    
+    public Double abs(Double x);
+
+    public Double sqrt(Double x);
    
 }
