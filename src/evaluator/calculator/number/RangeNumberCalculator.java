@@ -122,5 +122,10 @@ public class RangeNumberCalculator implements NumberCalculator {
     public Double sqrt(Double x) {
         return calculator.abs(x);
     }
+ 
+    @Override
+    public Double tan(Double x) {
+        return calculator.tan(x);
+    }
 
 }

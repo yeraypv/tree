@@ -113,5 +113,11 @@ public class CoreNumberCalculator extends Calculator implements NumberCalculator
         return Math.sqrt(x);
     }
     
+    @Function
+    @Override
+    public Double tan(Double x) {
+        return Math.tan(x);
+    }
+    
 
 }

@@ -37,5 +37,7 @@ public interface NumberCalculator {
     public Double abs(Double x);
 
     public Double sqrt(Double x);
+    
+    public Double tan(Double x);
    
 }
