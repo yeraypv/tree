@@ -14,7 +14,7 @@ public class CalculateEvaluate implements Evaluate {
     static {
         operatorMap = new HashMap<>();
         operatorMap.put("+", Operator.add);
-        operatorMap.put("-", Operator.subtract);
+        operatorMap.put("-", Operator.substract);
         operatorMap.put("*", Operator.mul);
         operatorMap.put("/", Operator.div);
     }

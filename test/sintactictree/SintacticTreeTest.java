@@ -14,27 +14,27 @@ public class SintacticTreeTest {
 
     @Test
     public void testTree() {
-        out.print("Tree: 1 + 2 * 3 = ");
+        out.print("Tree: 1 + 3 * 3 = ");
         Tree tree = new Tree();
-        Node uno = new Constant(new Double(1.0));
-        Node dos = new Constant(new Double(2.0));
-        Node tres = new Constant(new Double(3.0));
-        Node multi = new Binary(Operator.mul, dos, tres);
-        Node sum = new Binary(Operator.add, uno, multi);
+        Node num1 = new Constant(new Double(1.0));
+        Node num2 = new Constant(new Double(3.0));
+        Node num3 = new Constant(new Double(3.0));
+        Node multi = new Binary(Operator.mul, num2, num3);
+        Node sum = new Binary(Operator.add, num1, multi);
         tree.setRoot(sum);
         out.println(tree.run().getValue());
-        assertEquals(7.0, (double) tree.run().getValue(), 0.0);
+        assertEquals(10.0, (double) tree.run().getValue(), 0.0);
     }
 
     @Test
     public void testTree2() {
         out.print("Tree: 1 + 2 - 3 = ");
         Tree tree = new Tree();
-        Node uno = new Constant(new Double(1.0));
-        Node dos = new Constant(new Double(2.0));
-        Node tres = new Constant(new Double(3.0));
-        Node resta = new Binary(Operator.subtract, dos, tres);
-        Node sum = new Binary(Operator.add, uno, resta);
+        Node num1 = new Constant(new Double(1.0));
+        Node num2 = new Constant(new Double(2.0));
+        Node num3 = new Constant(new Double(3.0));
+        Node resta = new Binary(Operator.substract, num2, num3);
+        Node sum = new Binary(Operator.add, num1, resta);
         tree.setRoot(sum);
         out.println(tree.run().getValue());
         assertEquals(0.0, (double) tree.run().getValue(), 0.0);

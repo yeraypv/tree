@@ -54,23 +54,23 @@ public class RangeNumberCalculator implements NumberCalculator {
     }
 
     @Override
-    public Double subtract(Double arg0, Double arg1) {
-        return calculator.subtract(arg0, arg1);
+    public Double substract(Double arg0, Double arg1) {
+        return calculator.substract(arg0, arg1);
     }
 
     @Override
-    public Double subtract(Double arg0, Integer arg1) {
-        return calculator.subtract(arg0, arg1);
+    public Double substract(Double arg0, Integer arg1) {
+        return calculator.substract(arg0, arg1);
     }
 
     @Override
-    public Double subtract(Integer arg0, Double arg1) {
-        return calculator.subtract(arg0, arg1);
+    public Double substract(Integer arg0, Double arg1) {
+        return calculator.substract(arg0, arg1);
     }
 
     @Override
-    public Integer subtract(Integer arg0, Integer arg1) {
-        return calculator.subtract(arg0, arg1);
+    public Integer substract(Integer arg0, Integer arg1) {
+        return calculator.substract(arg0, arg1);
     }
 
     @Override

@@ -4,7 +4,7 @@ import evaluator.types.Double;
 import static org.junit.Assert.*;
 import org.junit.Test;
 
-public class VariableTest {
+public class ConstantsVariablesTest {
 
     @Test
     public void testEvaluate() {

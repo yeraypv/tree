@@ -3,7 +3,7 @@ package evaluator.nodes;
 public class Operator {
 
     public static final Operator add = new Operator("add", '+', OperatorType.BINARY);
-    public static final Operator subtract = new Operator("subtract", '-', OperatorType.BINARY);
+    public static final Operator substract = new Operator("substract", '-', OperatorType.BINARY);
     public static final Operator mul = new Operator("mul", '*', OperatorType.BINARY);
     public static final Operator div = new Operator("div", '/', OperatorType.BINARY);
     

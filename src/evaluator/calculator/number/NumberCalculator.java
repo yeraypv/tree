@@ -10,13 +10,13 @@ public interface NumberCalculator {
 
     public Integer add(Integer arg0, Integer arg1);
 
-    public Double subtract(Double arg0, Double arg1);
+    public Double substract(Double arg0, Double arg1);
 
-    public Double subtract(Double arg0, Integer arg1);
+    public Double substract(Double arg0, Integer arg1);
 
-    public Double subtract(Integer arg0, Double arg1);
+    public Double substract(Integer arg0, Double arg1);
 
-    public Integer subtract(Integer arg0, Integer arg1);
+    public Integer substract(Integer arg0, Integer arg1);
 
     public Double mul(Double arg0, Double arg1);
 

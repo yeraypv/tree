@@ -31,25 +31,25 @@ public class CoreNumberCalculator extends Calculator implements NumberCalculator
 
     @Override
     @Operators("-")
-    public Double subtract(Double arg0, Double arg1) {
+    public Double substract(Double arg0, Double arg1) {
         return arg0 - arg1;
     }
 
     @Override
     @Operators("-")
-    public Double subtract(Double arg0, Integer arg1) {
+    public Double substract(Double arg0, Integer arg1) {
         return arg0 - arg1;
     }
 
     @Override
     @Operators("-")
-    public Double subtract(Integer arg0, Double arg1) {
+    public Double substract(Integer arg0, Double arg1) {
         return arg0 - arg1;
     }
 
     @Override
     @Operators("-")
-    public Integer subtract(Integer arg0, Integer arg1) {
+    public Integer substract(Integer arg0, Integer arg1) {
         return arg0 - arg1;
     }
 
