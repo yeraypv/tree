@@ -24,16 +24,14 @@ public class CalculateEvaluate implements Evaluate {
     }
 
     @Override
-    public Type calculate(Operator operator, Type arg0, Type arg1) {
-          Calculator calculator = findCalculator(arg0, arg1);
-
-          //TODO: Faltan cosas aqui
+    public Type calculate(Operator operator, Type arg0, Type arg1) {         
+        Calculator calculator = selectCalculators(arg0, arg1);
         if (operator == null || calculator == null) {
             return null;
         }
         try {
-            Method method = calculator.getClass().getMethod(operator.getName(), arg0.getValue().getClass(), arg1.getValue().getClass());
-            return findType(method.invoke(calculator, arg0.getValue(), arg1.getValue()));
+            Method method = calculator.getClass().getMethod(operator.getName(), getValue(arg0), getValue(arg0));
+            return convertType(method.invoke(calculator, arg0.getValue(), arg1.getValue()));
         } catch (NoSuchMethodException | SecurityException ex) {
             return null;
         } catch (IllegalAccessException | IllegalArgumentException | InvocationTargetException ex) {
@@ -42,7 +40,11 @@ public class CalculateEvaluate implements Evaluate {
  
     }
 
-    private Type findType(Object object) {
+    private Class<? extends Object> getValue(Type arg0){
+        return arg0.getValue().getClass();
+    }
+
+    private Type convertType(Object object) {
         if (object instanceof Integer) {
             return new evaluator.types.Integer((Integer) object);
         }
@@ -52,22 +54,7 @@ public class CalculateEvaluate implements Evaluate {
         return null;
     }
 
-    private Calculator findCalculator(Type arg0, Type arg1) {
-        if (arg0 == null || arg1 == null) {
-            return null;
-        }
-        if ((arg0.getValue() instanceof Double) && (arg1.getValue() instanceof Double)) {
-            return new CoreNumberCalculator();
-        }
-        if ((arg0.getValue() instanceof Integer) && (arg1.getValue() instanceof Double)) {
-            return new CoreNumberCalculator();
-        }
-        if ((arg0.getValue() instanceof Double) && (arg1.getValue() instanceof Integer)) {
-            return new CoreNumberCalculator();
-        }
-        if ((arg0.getValue() instanceof Integer) && (arg1.getValue() instanceof Integer)) {
-            return new CoreNumberCalculator();
-        }
-        return null;
+    private Calculator selectCalculators(Type arg0, Type arg1) {
+        return (arg0==null || arg1 == null)?null:new CoreNumberCalculator();
     }
 }
