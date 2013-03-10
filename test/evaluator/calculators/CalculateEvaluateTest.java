@@ -13,7 +13,7 @@ public class CalculateEvaluateTest {
         Type num2 = new Type(2) {};
         Type r = new Type(0.0) {};
         r = cal.calculate(Operator.add, num1, num2);        
-        assertEquals(4.0, (double) r.getValue(), 0.001);
+        assertEquals(4.0, (Double)r.getValue(),0.001);
     }
         
     @Test
