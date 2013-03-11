@@ -4,7 +4,6 @@ import evaluator.calculators.annotations.Function;
 import evaluator.calculators.annotations.Operators;
 
 public class CoreNumberCalculator extends Calculator implements NumberCalculator {
-
     @Override
     @Operators("+")
     public Double add(Double arg0, Double arg1) {
@@ -111,8 +110,6 @@ public class CoreNumberCalculator extends Calculator implements NumberCalculator
     @Override
     public Double sqrt(Double x) {
         return Math.sqrt(x);
-        
-        //
     }
     
     @Function
@@ -120,6 +117,4 @@ public class CoreNumberCalculator extends Calculator implements NumberCalculator
     public Double tan(Double x) {
         return Math.tan(x);
     }
-    
-
 }

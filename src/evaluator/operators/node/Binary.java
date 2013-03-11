@@ -10,13 +10,13 @@ import evaluator.nodes.Operator;
 public class Binary extends Operation {
 
     private final Operator operator;
-    private final Node leftChild, rightChild;
+    private final Node left, right;
     private Evaluate evaluate = new CalculateEvaluate();
 
     public Binary(Operator operation, Node leftChild, Node rightChild) {
         this.operator = operation;
-        this.leftChild = leftChild;
-        this.rightChild = rightChild;
+        this.left = leftChild;
+        this.right = rightChild;
     }
 
     public Operator getOperator() {
@@ -24,11 +24,11 @@ public class Binary extends Operation {
     }
 
     public Node getLeftChild() {
-        return leftChild;
+        return left;
     }
 
     public Node getRightChild() {
-        return rightChild;
+        return right;
     }
 
     @Override

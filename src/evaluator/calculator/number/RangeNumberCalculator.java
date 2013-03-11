@@ -25,7 +25,8 @@ public class RangeNumberCalculator implements NumberCalculator {
     private Double validate(Double arg0) {
         if (arg0 > getUpperLimit()) {
             return null;
-            // TODO falta Implemetar limites de rango
+            // TODO falta Implemetar limites de rango y refactorizar
+            // return (arg0>getUpperLimit)?return:return;
         }
         if (arg0 < getLowerLimit()) {
             return null;
