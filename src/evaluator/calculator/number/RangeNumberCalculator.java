@@ -129,4 +129,9 @@ public class RangeNumberCalculator implements NumberCalculator {
         return calculator.tan(x);
     }
 
+    @Override
+    public String add(String arg0, String arg1) {
+        return calculator.add(arg0,arg1);
+    }
+
 }

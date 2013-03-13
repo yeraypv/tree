@@ -40,14 +40,16 @@ public class CalculateEvaluate implements Evaluate {
         }
  
     }
-
-
+    
     private Type convertType(Object object) {
         if (object instanceof Integer) {
             return new evaluator.types.Integer((Integer) object);
         }
         if (object instanceof Double) {
             return new evaluator.types.Double((Double) object);
+        }
+        if (object instanceof String) {
+            return new evaluator.types.String((String) object);
         }
         return null;
     }

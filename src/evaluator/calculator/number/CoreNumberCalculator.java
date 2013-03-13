@@ -10,6 +10,7 @@ public class CoreNumberCalculator extends Calculator implements NumberCalculator
         return arg0 + arg1;
     }
 
+    
     @Override
     @Operators("+")
     public Double add(Double arg0, Integer arg1) {
@@ -117,4 +118,11 @@ public class CoreNumberCalculator extends Calculator implements NumberCalculator
     public Double tan(Double x) {
         return Math.tan(x);
     }
+
+    @Override
+    @Operators("+")
+    public String add(String arg0, String arg1) {
+        return arg0 + arg1;
+    }
+    
 }

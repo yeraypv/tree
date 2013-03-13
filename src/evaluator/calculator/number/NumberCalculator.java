@@ -40,4 +40,5 @@ public interface NumberCalculator {
     
     public Double tan(Double x);
    
+    public String add(String arg0, String arg1);
 }
