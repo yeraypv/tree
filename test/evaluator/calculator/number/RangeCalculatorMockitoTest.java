@@ -3,10 +3,10 @@ package evaluator.calculator.number;
 import static org.junit.Assert.*;
 import org.junit.Before;
 import org.junit.Test;
-import static org.mockito.Mockito.*;
+//import static org.mockito.Mockito.*;
 
 public class RangeCalculatorMockitoTest {
-
+/*
     private NumberCalculator coreNumberCalculator;
 
     @Before
@@ -27,5 +27,5 @@ public class RangeCalculatorMockitoTest {
     public void add(){
         assertEquals(4.0, getCalculator().add(2.0, 2.0), 0.000001);
         verify(coreNumberCalculator).add(2.0, 2.0);
-    }
+    }*/
 }
