@@ -14,7 +14,6 @@ public class SintacticTreeTest {
 
     @Test
     public void testTree() {
-        out.print("Tree: 1 + 3 * 3 = ");
         Tree tree = new Tree();
         Node num1 = new Constant(new Double(1.0));
         Node num2 = new Constant(new Double(3.0));
@@ -28,7 +27,6 @@ public class SintacticTreeTest {
 
     @Test
     public void testTree2() {
-        out.print("Tree: 1 + 2 - 3 = ");
         Tree tree = new Tree();
         Node num1 = new Constant(new Double(1.0));
         Node num2 = new Constant(new Double(2.0));

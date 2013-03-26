@@ -104,14 +104,5 @@ public class OperatorsTest {
         assertEquals("holahola", node.evaluate().getValue());
     }
     
-    
-    @Test
-    public void addStringString() {
-        Type num1 = new Type("hola") {};
-        Type num2 = new Type("hola") {};
-        Type r = new Type("") {};
-        Node node = new Binary(Operator.add, new Constant(num1), new Constant(num2));
-        assertEquals("holahola", node.evaluate().getValue());
-    }
 
 }

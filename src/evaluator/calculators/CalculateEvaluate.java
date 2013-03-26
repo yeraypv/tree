@@ -9,7 +9,7 @@ import java.util.HashMap;
 
 public class CalculateEvaluate implements Evaluate {
 
-    //TODO: tiene que estar en otra clae operador
+    //TODO: tiene que estar en otra clase operador
     private static HashMap<String, Operator> operatorMap;
 
     static {
