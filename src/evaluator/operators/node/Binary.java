@@ -1,7 +1,7 @@
 package evaluator.operators.node;
 
-import evaluator.Node;
-import evaluator.Type;
+import evaluator.elements.Node;
+import evaluator.elements.Type;
 import evaluator.calculators.CalculateEvaluate;
 import evaluator.calculators.Evaluate;
 import evaluator.nodes.Operation;
@@ -36,5 +36,10 @@ public class Binary extends Operation {
         Type left = getLeftChild().evaluate();
         Type right = getRightChild().evaluate();
         return evaluate.calculate(operator, left, right);
+    }
+
+    @Override
+    public String toString() {
+        throw new UnsupportedOperationException("Not supported yet.");
     }
 }

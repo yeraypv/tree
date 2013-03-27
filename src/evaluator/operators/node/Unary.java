@@ -1,7 +1,7 @@
 package evaluator.operators.node;
 
-import evaluator.Node;
-import evaluator.Type;
+import evaluator.elements.Node;
+import evaluator.elements.Type;
 import evaluator.nodes.Operation;
 import evaluator.nodes.Operator;
 
@@ -21,6 +21,11 @@ public class Unary extends Operation {
 
     @Override
     public Type evaluate() {
+        throw new UnsupportedOperationException("Not supported yet.");
+    }
+
+    @Override
+    public String toString() {
         throw new UnsupportedOperationException("Not supported yet.");
     }
 }

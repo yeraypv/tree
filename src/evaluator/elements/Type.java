@@ -1,7 +1,7 @@
-package evaluator;
+package evaluator.elements;
 
-public abstract class Type<T> {
-    
+public class Type<T> {
+
     private T value;
 
     public Type(T value) {
@@ -11,5 +11,4 @@ public abstract class Type<T> {
     public T getValue() {
         return value;
     }
-    
 }

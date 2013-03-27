@@ -1,6 +1,6 @@
 package evaluator.calculators;
 
-import evaluator.Type;
+import evaluator.elements.Type;
 import evaluator.nodes.Operator;
 
 public interface Evaluate {

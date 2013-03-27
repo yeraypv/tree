@@ -1,7 +1,7 @@
 package sintactictree;
 
-import evaluator.Node;
-import evaluator.Tree;
+import evaluator.elements.Node;
+import evaluator.elements.Tree;
 import evaluator.nodes.Constant;
 import evaluator.nodes.Operator;
 import evaluator.operators.node.Binary;

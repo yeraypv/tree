@@ -1,7 +1,7 @@
 package evaluator.nodes;
 
-import evaluator.Node;
-import evaluator.Type;
+import evaluator.elements.Node;
+import evaluator.elements.Type;
 
 public class Constant extends Node {
 
@@ -18,5 +18,10 @@ public class Constant extends Node {
     @Override
     public Type evaluate() {
         return value;
+    }
+
+    @Override
+    public String toString() {
+        throw new UnsupportedOperationException("Not supported yet.");
     }
 }

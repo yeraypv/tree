@@ -1,6 +1,6 @@
 package evaluator.nodes;
 
-import evaluator.Type;
+import evaluator.elements.Type;
 import evaluator.calculators.CalculateEvaluate;
 import evaluator.types.Double;
 import static org.junit.Assert.*;

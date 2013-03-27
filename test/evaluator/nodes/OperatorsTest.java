@@ -1,7 +1,7 @@
 package evaluator.nodes;
 
-import evaluator.Node;
-import evaluator.Type;
+import evaluator.elements.Node;
+import evaluator.elements.Type;
 import evaluator.operators.node.Binary;
 import evaluator.types.Double;
 import evaluator.types.Integer;

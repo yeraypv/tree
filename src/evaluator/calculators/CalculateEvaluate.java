@@ -1,6 +1,6 @@
 package evaluator.calculators;
 
-import evaluator.Type;
+import evaluator.elements.Type;
 import evaluator.calculator.number.CoreNumberCalculator;
 import evaluator.nodes.Operator;
 import java.lang.reflect.InvocationTargetException;

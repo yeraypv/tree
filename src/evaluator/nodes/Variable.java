@@ -1,7 +1,7 @@
 package evaluator.nodes;
 
-import evaluator.Node;
-import evaluator.Type;
+import evaluator.elements.Node;
+import evaluator.elements.Type;
 
 class Variable extends Node {
 
@@ -22,5 +22,10 @@ class Variable extends Node {
     @Override
     public Type evaluate() {
         return value;
+    }
+
+    @Override
+    public String toString() {
+        throw new UnsupportedOperationException("Not supported yet.");
     }
 }

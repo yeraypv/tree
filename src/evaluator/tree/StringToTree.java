@@ -1,6 +1,6 @@
 package evaluator.tree;
 
-import evaluator.Tree;
+import evaluator.elements.Tree;
 
 
 public class StringToTree {
