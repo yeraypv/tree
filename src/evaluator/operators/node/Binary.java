@@ -2,7 +2,7 @@ package evaluator.operators.node;
 
 import evaluator.elements.Node;
 import evaluator.elements.Type;
-import evaluator.calculators.CalculateEvaluate;
+import evaluator.calculators.Calculate;
 import evaluator.calculators.Evaluate;
 import evaluator.nodes.Operation;
 import evaluator.nodes.Operator;
@@ -11,7 +11,7 @@ public class Binary extends Operation {
 
     private final Operator operator;
     private final Node left, right;
-    private Evaluate evaluate = new CalculateEvaluate();
+    private Evaluate evaluate = new Calculate();
 
     public Binary(Operator operation, Node leftChild, Node rightChild) {
         this.operator = operation;

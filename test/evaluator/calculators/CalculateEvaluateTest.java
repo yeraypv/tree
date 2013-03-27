@@ -8,7 +8,7 @@ import org.junit.Test;
 public class CalculateEvaluateTest {
     @Test
     public void calculateAddTest() {
-        CalculateEvaluate cal = new CalculateEvaluate();
+        Calculate cal = new Calculate();
         Type num1 = new Type(2.0) {};
         Type num2 = new Type(2) {};
         Type r = new Type(0.0) {};
@@ -18,7 +18,7 @@ public class CalculateEvaluateTest {
         
     @Test
     public void calculateSubstractTest() {
-        CalculateEvaluate cal = new CalculateEvaluate();
+        Calculate cal = new Calculate();
         Type num1 = new Type(2.0) {};
         Type num2 = new Type(2.0) {};
         Type r = new Type(0.0) {};
@@ -28,7 +28,7 @@ public class CalculateEvaluateTest {
            
     @Test
     public void calculateMulTest() {
-        CalculateEvaluate cal = new CalculateEvaluate();
+        Calculate cal = new Calculate();
         Type num1 = new Type(2) {};
         Type num2 = new Type(2.0) {};
         Type r = new Type(0.0) {};
@@ -39,7 +39,7 @@ public class CalculateEvaluateTest {
    
     @Test
     public void calculateDivTest() {
-        CalculateEvaluate cal = new CalculateEvaluate();
+        Calculate cal = new Calculate();
         Type num1 = new Type(2) {};
         Type num2 = new Type(2) {};
         Type r = new Type(0.0) {};
