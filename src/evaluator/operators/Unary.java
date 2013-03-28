@@ -1,7 +1,7 @@
-package evaluator.operators.node;
+package evaluator.operators;
 
-import evaluator.elements.Node;
-import evaluator.elements.Type;
+import evaluator.nodes.Node;
+import evaluator.nodes.Type;
 import evaluator.nodes.Operation;
 import evaluator.nodes.Operator;
 

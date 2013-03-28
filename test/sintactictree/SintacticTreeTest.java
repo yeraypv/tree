@@ -1,10 +1,10 @@
 package sintactictree;
 
-import evaluator.elements.Node;
+import evaluator.nodes.Node;
 import evaluator.elements.Tree;
-import evaluator.elements.Constant;
+import evaluator.calculator.constants.Constant;
 import evaluator.nodes.Operator;
-import evaluator.operators.node.Binary;
+import evaluator.operators.Binary;
 import evaluator.types.Double;
 import static java.lang.System.out;
 import static org.junit.Assert.*;

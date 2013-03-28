@@ -1,11 +1,12 @@
 package evaluator.calculator.number;
 
+import evaluator.calculators.CoreNumberCalculator;
 import static org.junit.Assert.*;
 import org.junit.Test;
 
 public class CoreNumberCalculatorTest {
 
-    public NumberCalculator getCalculator() {
+    public CoreNumberCalculator getCalculator() {
         return new CoreNumberCalculator();
     }
 

@@ -1,9 +1,7 @@
 package evaluator.nodes;
 
-import evaluator.elements.Constant;
-import evaluator.elements.Node;
-import evaluator.elements.Type;
-import evaluator.operators.node.Binary;
+import evaluator.calculator.constants.Constant;
+import evaluator.operators.Binary;
 import evaluator.types.Double;
 import evaluator.types.Integer;
 import static org.junit.Assert.*;

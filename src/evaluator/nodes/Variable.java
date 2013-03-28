@@ -1,8 +1,5 @@
 package evaluator.nodes;
 
-import evaluator.elements.Node;
-import evaluator.elements.Type;
-
 class Variable extends Node {
 
     private Type value;

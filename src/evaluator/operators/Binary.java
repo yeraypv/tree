@@ -1,21 +1,21 @@
-package evaluator.operators.node;
+package evaluator.operators;
 
 import evaluator.calculator.operators.OperatorBinary;
 import evaluator.calculators.Calculate;
-import evaluator.elements.Node;
-import evaluator.elements.Type;
+import evaluator.nodes.Node;
 import evaluator.nodes.Operation;
 import evaluator.nodes.Operator;
+import evaluator.nodes.Type;
 
 public class Binary extends Operation {
     private Calculate calculatorEvaluator = new Calculate();
-    private final Node leftChild;
-    private final Node rightChild;
+    private final Node leftNode;
+    private final Node rightNode;
     private final OperatorBinary operator;
 
     public Binary(Node Left, Node Right, OperatorBinary operator) {
-        this.leftChild = Left;
-        this.rightChild = Right;
+        this.leftNode = Left;
+        this.rightNode = Right;
         this.operator = operator;
     }
 
@@ -24,11 +24,11 @@ public class Binary extends Operation {
     }
 
     public Node getLeftChild() {
-        return leftChild;
+        return leftNode;
     }
 
     public Node getRightChild() {
-        return rightChild;
+        return rightNode;
     }
     
     private int getIndexOperator(Binary binary){
@@ -39,18 +39,26 @@ public class Binary extends Operation {
         return (getIndexOperator(binary1) > getIndexOperator(binary2)) ? true : false;
     }
 
+    private boolean isBinary(Node elem){
+        return elem instanceof Binary;
+    }
+    
+    private boolean isBinaryAndMaxPreference(Node elem){
+        return isBinary(elem) && isMaxPreference(this, (Binary) elem);
+    }
+    
     private String StringCatch(Node elem) {
-        return (elem instanceof Binary && isMaxPreference(this, (Binary) elem))? "(" + elem.toString() + ")" : elem.toString();
+        return (isBinaryAndMaxPreference(elem))? "(" + elem.toString() + ")" : elem.toString();
     }
         
     @Override
     public Type evaluate() {
-        return calculatorEvaluator.getType(operator, new Type[]{leftChild.evaluate(), rightChild.evaluate()});
+        return calculatorEvaluator.getType(operator, new Type[]{leftNode.evaluate(), rightNode.evaluate()});
     }
         
     @Override
     public String toString() {
-        return StringCatch(leftChild) + operator.getInfo() + StringCatch(rightChild);
+        return StringCatch(leftNode) + operator.getInfo() + StringCatch(rightNode);
     }
 
 }

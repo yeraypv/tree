@@ -1,6 +1,6 @@
 package evaluator.types;
 
-import evaluator.elements.Type;
+import evaluator.nodes.Type;
 
 public class Double extends Type<java.lang.Double> {
 

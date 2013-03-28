@@ -1,15 +1,17 @@
-package evaluator.elements;
+package evaluator.calculator.constants;
+
+import evaluator.nodes.Node;
+import evaluator.nodes.Type;
 
 public class Constant extends Node {
+    private final Type<?> value;
 
-   private final Type<?> value;
-
-    public Constant(Type<?> value) {
-        this.value = value;
-    }
-    
     private String getValueString(){
         return value.getValue().toString();
+    }
+    
+    public Constant(Type<?> value) {
+        this.value = value;
     }
 
     @Override
