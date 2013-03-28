@@ -1,11 +1,6 @@
 package evaluator.calculator.operators;
-
 import evaluator.nodes.Operator;
 
-/**
- *
- * @author yeray
- */
 public class OperatorBinary extends Operator {
     //TODO:
     public static final OperatorBinary ADD = new OperatorBinary("+", "add", 1);

@@ -2,7 +2,7 @@ package sintactictree;
 
 import evaluator.elements.Node;
 import evaluator.elements.Tree;
-import evaluator.nodes.Constant;
+import evaluator.elements.Constant;
 import evaluator.nodes.Operator;
 import evaluator.operators.node.Binary;
 import evaluator.types.Double;

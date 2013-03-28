@@ -11,9 +11,7 @@ import org.reflections.Reflections;
 import org.reflections.util.ClasspathHelper;
 import org.reflections.util.ConfigurationBuilder;
 
-public class Calculate implements Evaluate {
-
-    
+public class Calculate{
     private HashMap<String, Method> methodBySignature = new HashMap<>();
 
     public Calculate() {
@@ -29,22 +27,27 @@ public class Calculate implements Evaluate {
 
     private void addReflectMethods(Class<?> theClass) {
         for (Method method : theClass.getDeclaredMethods()) {
-            if (!method.isAnnotationPresent(Operation.class)) continue;
+            if (!method.isAnnotationPresent(Operation.class)) {
+                continue;
+            }
             methodBySignature.put(getSignature(method), method);
         }
     }
-    
-        
+          
     private String getSignature(Method method) {
         String signature = method.getName();
         Class<?>[] params = method.getParameterTypes();
-        for (Class paramClass : params) signature += paramClass.getSimpleName();
+        for (Class paramClass : params) {
+            signature += paramClass.getSimpleName();
+        }
         return signature;
     }
 
     private String getSignature(Operator operator, Object[] object) {
         String signature = operator.getName();
-        for (Object obj : object) signature += obj.getClass().getSimpleName();
+        for (Object obj : object) {
+            signature += obj.getClass().getSimpleName();
+        }
         return signature;
     }
 
@@ -58,10 +61,4 @@ public class Calculate implements Evaluate {
         }
         return null;
     }
-
-    @Override
-    public Type calculate(Operator operator, Type arg0, Type arg1) {
-        throw new UnsupportedOperationException("Not supported yet.");
-    }
-
 }
