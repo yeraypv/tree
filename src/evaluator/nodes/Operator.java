@@ -1,7 +1,6 @@
 package evaluator.nodes;
 
 public class Operator {
-    //TODO: To create Operator
     private int indexOperator;
     private final String info;
     private final String name;

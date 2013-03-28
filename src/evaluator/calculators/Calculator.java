@@ -1,4 +1,4 @@
 package evaluator.calculators;
 
-public abstract class Calculator {
+public interface Calculator {
 }
