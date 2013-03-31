@@ -10,7 +10,7 @@ import org.junit.Before;
 import org.junit.Test;
 import static org.mockito.Mockito.*;
 
-public class BinaryOperatorsMockitoTest {
+public class MockitoTest {
 
     private Binary binaryOperation;
     
