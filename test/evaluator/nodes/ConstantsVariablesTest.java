@@ -18,7 +18,7 @@ public class ConstantsVariablesTest {
         Variable variable = new Variable(new Double(2.0));
         assertEquals(java.lang.Double.class, variable.evaluate().getValue().getClass());
         assertEquals(2.0, (double) variable.evaluate().getValue(), 0.0);
-        variable.setValue(new Double(3.0));
+        variable.setType(new Double(3.0));
         assertEquals(java.lang.Double.class, variable.evaluate().getValue().getClass());
         assertEquals(3.0, (double) variable.evaluate().getValue(), 0.0);
 

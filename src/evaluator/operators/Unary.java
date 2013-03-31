@@ -1,31 +1,37 @@
 package evaluator.operators;
 
+import evaluator.calculators.Calculate;
 import evaluator.nodes.Node;
-import evaluator.nodes.Type;
 import evaluator.nodes.Operation;
 import evaluator.nodes.Operator;
+import evaluator.nodes.Type;
 
 public class Unary extends Operation {
+ 
+    private Calculate calculatorEvaluator = new Calculate();
+    private final Operator unary;
+    private final Node info;
 
-    private final Operator unaryOperation;
-    private final Node child;
-
-    public Unary(Operator unaryOperation, Node child) {
-        this.unaryOperation = unaryOperation;
-        this.child = child;
+    public Unary(Operator unary, Node info) {
+        this.unary = unary;
+        this.info = info;
     }
 
-    public Node getChild() {
-        return child;
+    public Node getInfo() {
+        return info;
+    }
+    
+    public Operator getOperator() {
+        return unary;
     }
 
     @Override
     public Type evaluate() {
-        throw new UnsupportedOperationException("Not supported yet.");
+        return calculatorEvaluator.getType(unary, new Type[]{info.evaluate()});
     }
 
     @Override
     public String toString() {
-        throw new UnsupportedOperationException("Not supported yet.");
+        return info.toString() + unary.getInfo();
     }
 }

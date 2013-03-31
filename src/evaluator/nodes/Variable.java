@@ -2,23 +2,23 @@ package evaluator.nodes;
 
 class Variable extends Node {
 
-    private Type value;
+    private Type type;
 
     public Variable(Type value) {
-        this.value = value;
+        this.type = value;
     }
 
-    public Type getValue() {
-        return value;
+    public Type getType() {
+        return type;
     }
 
-    public void setValue(Type value) {
-        this.value = value;
+    public void setType(Type type) {
+        this.type = type;
     }
 
     @Override
     public Type evaluate() {
-        return value;
+        return type;
     }
 
     @Override
