@@ -1,6 +1,6 @@
 
 package evaluator.parser;
 
-public class Parser {
+public class ParserStringToTree {
     //TODO: Parser
 }

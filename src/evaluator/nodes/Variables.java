@@ -1,10 +1,10 @@
 package evaluator.nodes;
 
-class Variable extends Node {
+class Variables extends Node {
 
     private Type type;
 
-    public Variable(Type value) {
+    public Variables(Type value) {
         this.type = value;
     }
 
@@ -14,6 +14,10 @@ class Variable extends Node {
 
     public void setType(Type type) {
         this.type = type;
+    }
+    
+    public Object getValue(){
+        return type.getValue();
     }
 
     @Override
@@ -25,4 +29,5 @@ class Variable extends Node {
     public String toString() {
         throw new UnsupportedOperationException("Not supported yet.");
     }
+
 }
