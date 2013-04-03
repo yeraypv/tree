@@ -1,4 +1,4 @@
-package evaluator.nodes;
+package evaluator.tree;
 
 public class Type<T> {
 

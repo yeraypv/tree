@@ -1,8 +1,8 @@
 package evaluator.calculators;
 
 import evaluator.calculators.annotations.Operation;
-import evaluator.nodes.Operator;
-import evaluator.nodes.Type;
+import evaluator.tree.Operator;
+import evaluator.tree.Type;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.util.HashMap;

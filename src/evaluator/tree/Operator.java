@@ -1,4 +1,4 @@
-package evaluator.nodes;
+package evaluator.tree;
 
 public class Operator {
     private int indexOperator;

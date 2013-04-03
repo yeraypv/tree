@@ -1,5 +1,5 @@
 package evaluator.calculator.operators;
-import evaluator.nodes.Operator;
+import evaluator.tree.Operator;
 
 public class OperatorBinary extends Operator {
     public static final OperatorBinary ADD = new OperatorBinary("+", "add", 1);

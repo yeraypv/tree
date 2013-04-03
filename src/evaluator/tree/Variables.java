@@ -1,6 +1,6 @@
-package evaluator.nodes;
+package evaluator.tree;
 
-class Variables extends Node {
+class Variables extends Tree {
 
     private Type type;
 

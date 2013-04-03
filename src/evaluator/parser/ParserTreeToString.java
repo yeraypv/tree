@@ -1,13 +1,13 @@
 package evaluator.parser;
 
-import evaluator.nodes.Node;
-import evaluator.nodes.Type;
+import evaluator.tree.Tree;
+import evaluator.tree.Type;
 
-public class ParserTreeToString extends Node{
+public class ParserTreeToString extends Tree{
     
-    private Node tree;
+    private Tree tree;
 
-    public ParserTreeToString(Node tree){
+    public ParserTreeToString(Tree tree){
         this.tree = tree;
     }
     

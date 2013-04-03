@@ -1,6 +1,6 @@
-package evaluator.nodes;
+package evaluator.tree;
 
-public abstract class Node {
+public abstract class Tree {
     public abstract Type evaluate();
     public abstract String toString();
 }

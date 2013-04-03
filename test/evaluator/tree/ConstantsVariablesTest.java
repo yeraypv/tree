@@ -1,4 +1,4 @@
-package evaluator.nodes;
+package evaluator.tree;
 
 import evaluator.types.Double;
 import static org.junit.Assert.*;

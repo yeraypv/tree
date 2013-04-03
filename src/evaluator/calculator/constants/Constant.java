@@ -1,9 +1,9 @@
 package evaluator.calculator.constants;
 
-import evaluator.nodes.Node;
-import evaluator.nodes.Type;
+import evaluator.tree.Tree;
+import evaluator.tree.Type;
 
-public class Constant extends Node {
+public class Constant extends Tree {
     private final Type<?> value;
 
     private String getValueString(){

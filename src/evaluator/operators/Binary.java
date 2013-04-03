@@ -2,18 +2,18 @@ package evaluator.operators;
 
 import evaluator.calculator.operators.OperatorBinary;
 import evaluator.calculators.Calculate;
-import evaluator.nodes.Node;
-import evaluator.nodes.Operation;
-import evaluator.nodes.Operator;
-import evaluator.nodes.Type;
+import evaluator.tree.Operation;
+import evaluator.tree.Operator;
+import evaluator.tree.Tree;
+import evaluator.tree.Type;
 
 public class Binary extends Operation {
     private Calculate calculatorEvaluator = new Calculate();
-    private final Node leftNode;
-    private final Node rightNode;
+    private final Tree leftNode;
+    private final Tree rightNode;
     private final OperatorBinary operator;
 
-    public Binary(Node Left, Node Right, OperatorBinary operator) {
+    public Binary(Tree Left, Tree Right, OperatorBinary operator) {
         this.leftNode = Left;
         this.rightNode = Right;
         this.operator = operator;
@@ -23,11 +23,11 @@ public class Binary extends Operation {
         return operator;
     }
 
-    public Node getLeftChild() {
+    public Tree getLeftChild() {
         return leftNode;
     }
 
-    public Node getRightChild() {
+    public Tree getRightChild() {
         return rightNode;
     }
     
@@ -39,15 +39,15 @@ public class Binary extends Operation {
         return (getIndexOperator(binary1) > getIndexOperator(binary2)) ? true : false;
     }
 
-    private boolean isBinary(Node elem){
+    private boolean isBinary(Tree elem){
         return elem instanceof Binary;
     }
     
-    private boolean isBinaryAndMaxPreference(Node elem){
+    private boolean isBinaryAndMaxPreference(Tree elem){
         return isBinary(elem) && isMaxPreference(this, (Binary) elem);
     }
     
-    private String StringCatch(Node elem) {
+    private String StringCatch(Tree elem) {
         return (isBinaryAndMaxPreference(elem))? "(" + elem.toString() + ")" : elem.toString();
     }
         

@@ -2,7 +2,7 @@ package evaluator.calculators;
 
 import evaluator.calculator.constants.Constant;
 import evaluator.calculator.operators.OperatorBinary;
-import evaluator.nodes.Node;
+import evaluator.tree.Tree;
 import evaluator.operators.Binary;
 import evaluator.types.Double;
 import junit.framework.Assert;
@@ -10,7 +10,7 @@ import org.junit.Test;
 
 public class CoreNumberCalculatorTests {
 
-    private Node result;
+    private Tree result;
 
     @Test
     public void doubleDoubleAdd() {

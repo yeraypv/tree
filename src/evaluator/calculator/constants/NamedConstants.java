@@ -1,6 +1,6 @@
 package evaluator.calculator.constants;
 
-import evaluator.nodes.Type;
+import evaluator.tree.Type;
 
 public class NamedConstants extends Constant{
         
